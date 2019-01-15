@@ -103,8 +103,7 @@ HANGMAN = (
 """)
 import random
 MAX_WRONG = len(HANGMAN) - 1
-WORDS = ("OVERUSED", "CLAM", "GUAM", "TAFFETA", "PYTHON")
-word = random.choice(WORDS)
+word = "Python"
 so_far = "-" * len(word)
 wrong = 0
 used = []
@@ -122,7 +121,6 @@ while wrong < MAX_WRONG and so_far != word:
  used.append(guess)
  if guess in word:
      print("\nYes!", guess, "is in the word!")
-     # create a new so_far to include guess
      new = " "
      for i in range(len(word)):
         if guess == word[i]:
