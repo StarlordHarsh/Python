@@ -1,0 +1,17 @@
+from tkinter import *
+root=Tk()
+root.title("Label")
+root.geometry("200x100")
+app=Frame(root)
+app.grid()
+lbl = Label(app, text = "This a label !")
+lbl.grid()
+btn=Button(app, text = "I do nothing")
+btn.grid()
+btn2=Button(app)
+btn2.grid()
+btn2.configure(text="me too !")
+btn3=Button(app)
+btn3.grid()
+btn3["text"] = "Same here !"
+root.mainloop()
