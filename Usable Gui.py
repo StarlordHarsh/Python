@@ -18,7 +18,7 @@ class Appli(Frame):
         self.btn2["text"] = "Reset"
         self.btn["command"] = self.update_count
         self.btn1["command"] = self.update_count_both
-        self.btn2["command"] = self.reset
+        self.btn2["command"] = self.reset()
         self.btn.grid()
         self.btn1.grid()
         self.btn2.grid()
@@ -35,8 +35,8 @@ class Appli(Frame):
         self.btn1["text"] = "Total Clicks: " + str(self.btn_clk1)
 
     def reset(self):
-        self.btn_clk-=1
-        self.btn_clk1-= 1
+        self.btn_clk=0
+        self.btn_clk1= 0
         self.btn["text"] = "Total Clicks: " + str(self.btn_clk)
         self.btn1["text"] = "Total Clicks: " + str(self.btn_clk1)
 
